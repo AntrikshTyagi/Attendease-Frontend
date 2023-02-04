@@ -2,19 +2,21 @@ import React from "react";
 // import UploadButton from "./UploadButton";
 // import Button from '@mui/material/Button';
 import './SimpleContainer'
+import Header from "./Header";
 // import SimpleContainer from "./SimpleContainer";
-import SignIn from "./SignIn";
-import SignUp from "./SignUp";
+// import SignIn from "./SignIn";
+// import SignUp from "./SignUp";
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       
+       <Header />
       </header>
-      <SignIn />
-      <SignUp />
+      {/* <Header /> */}
+      {/* <SignIn /> */}
+      {/* <SignUp /> */}
       {/* <SignUp /> */}
       {/* <SimpleContainer> */}
         {/* <UploadButton /> */}
