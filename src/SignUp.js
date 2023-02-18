@@ -29,7 +29,15 @@ function Copyright(props) {
   );
 }
 
-const theme = createTheme();
+const { palette } = createTheme();
+const { augmentColor } = palette;
+const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
+const theme = createTheme({
+  palette: {
+    primary: createColor("#2d6c35"),
+    secondary: createColor("#61d800"),
+  },
+});
 
 export default function SignUp() {
   const handleSubmit = (event) => {
@@ -119,9 +127,10 @@ export default function SignUp() {
             </Grid>
             <Button
               type="submit"
+              color="primary"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, ":hover": { bgcolor: "#09af00" } }}
             >
               Create Account
             </Button>

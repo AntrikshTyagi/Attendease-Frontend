@@ -1,82 +1,3 @@
-// import React, { useState } from "react";
-// import { Link } from 'react-router-dom';
-
-// import { styled } from "@mui/material/styles";
-// import { purple } from "@mui/material/colors";
-// import {
-//   AppBar,
-//   Button,
-//   //   Tab,
-//   Tabs,
-//   Toolbar,
-//   Typography,
-//   useMediaQuery,
-//   useTheme,
-// } from "@mui/material";
-// import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
-// import DrawerComp from "./Drawer";
-
-// const ColorButton = styled(Button)(({ theme }) => ({
-//   // color: theme.palette.getContrastText(purple[500]),
-//   // backgroundColor: "inherit",
-//   marginLeft: "10px",
-//   textTransform: "uppercase",
-//   "&:hover": {
-//     color: "inherit",
-//     background: "rgba(200, 200, 200, 0.2)",
-//     boxShadow: "none",
-//   },
-// }));
-
-// const Header = () => {
-//   const [value, setValue] = useState();
-//   const theme = useTheme();
-//   console.log(theme);
-//   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-//   console.log(isMatch);
-
-//   return (
-//     <React.Fragment>
-//       <AppBar sx={{ background: "#512da8" }}>
-//         <Toolbar>
-//           <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
-//           {isMatch ? (
-//             <>
-//               <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-//                 Facial Attendance
-//               </Typography>
-//               <DrawerComp />
-//             </>
-//           ) : (
-//             <>
-//               <Tabs
-//                 sx={{ marginLeft: "auto" }}
-//                 indicatorColor="secondary"
-//                 textColor="inherit"
-//                 value={value}
-//                 onChange={(e, value) => setValue(value)}
-//               >
-//                 <h2>Facial Attendance</h2>
-//               </Tabs>
-//               <ColorButton color="inherit">About</ColorButton>
-//               <ColorButton color="inherit">Contact</ColorButton>
-//               {/* <ColorButton variant="contained">Custom CSS</ColorButton> */}
-//               {/* <Button
-//                 sx={{ marginLeft: "10px", background: "#e9c46a" }}
-//                 variant="contained"
-//               >
-//                 SignUp
-//               </Button> */}
-//             </>
-//           )}
-//         </Toolbar>
-//       </AppBar>
-//     </React.Fragment>
-//   );
-// };
-
-// export default Header;
-
 import * as React from "react";
 import { Link } from "react-router-dom";
 
@@ -93,8 +14,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import "./NavLink.css";
 
-const pages = ["contact"];
+const pages = ["Contact"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
@@ -117,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ background: "#512da8" }}>
+    <AppBar position="static" sx={{ background: "#2d6c35" }}>
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
@@ -147,7 +69,7 @@ function ResponsiveAppBar() {
             }}
           >
             {pages.map((page) => (
-              <Link key={page} to={`/${page}`}>
+              <Link className="Class" key={page} to={`/${page}`}>
                 <Button sx={{ my: 2, color: "white", display: "block" }}>
                   {page}
                 </Button>
