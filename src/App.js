@@ -6,20 +6,18 @@ import Header from "./Header";
 // import SimpleContainer from "./SimpleContainer";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
+import Contact from "./Contact";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-      {/* <Header /> */}
-      <SignIn />
-      {/* <SignUp /> */}
-      {/* <SignUp /> */}
-      {/* <SimpleContainer> */}
-      {/* <UploadButton /> */}
-      {/* </SimpleContainer> */}
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" exact element={<SignIn />} />
+        <Route path="/register" exact element={<SignUp />} />
+        <Route path="/contact" exact element={<Contact />} />
+      </Routes>
     </div>
   );
 }
