@@ -117,6 +117,7 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
+            nonce=""
             component="a"
             href=""
             sx={{
