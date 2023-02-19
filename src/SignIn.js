@@ -79,7 +79,7 @@ export default function SignInSide() {
               my: 7,
             }}
           >
-            <img src={clgLogo} />
+            <img src={clgLogo} alt="IET DAVV" style={{ marginTop: 130 }} />
           </Box>
           <Box sx={{ mx: 4, textAlign: "center" }}>
             <p>
