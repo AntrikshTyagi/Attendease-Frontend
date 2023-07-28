@@ -1,3 +1,7 @@
+## Update
+
+This Repository consists of the Front End for the Facial Attendance application developed by final year students of IET DAVV. Work in relation to the complete application can be reviewed [Here](https://github.com/vaibhav-neema/facial-recognition-based-attendance-system-react). Use without permission is strictly prohibited.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
